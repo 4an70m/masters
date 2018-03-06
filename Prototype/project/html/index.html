@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <script src="\Prototype\project\js\jquery-3.2.1.min.js"></script>
+        <script src="\Prototype\project\js\popper.min.js"></script>
+        <script src="\Prototype\project\js\bootstrap.js"></script>
+        <link rel="stylesheet" href="\Prototype\project\css\bootstrap.css" />
+
+        <title>Prototype</title>
+
+        <style>
+            html, body {
+                height: 100%;
+            }
+            .bg-dark {
+                background-color: #203659 !important;
+            }
+            .bg-light {
+                background-color: #1f2f4a !important;
+            }
+            .container-fluid, .container-fluid .row, .container-fluid .row .sidebar {
+                height: 100%;
+            }
+            .sidebar-sticky {
+                color: #6c757d !important;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand pr-4" href="#">Прототип карти грунтів Укрїни</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarsExample04" aria-controls="navbarsExample04"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Інформація</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="#">Про КПІ</a>
+                            <a class="dropdown-item" href="#">Про Інститут сталого розвитку</a>
+                            <a class="dropdown-item" href="#">Про автора</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky">
+                        <ul class="nav flex-column pt-4">
+                            <li class="nav-item">
+                                <h3 style="color: #fdfdfe">Фільтри</h3>
+                                <small class="text-muted">Оберіть фільтри щоб вибрати територію:</small>
+                            </li>
+                            <li class="nav-item">
+                                <div class="form-group pt-3 pb-3">
+                                    <label for="exampleInputEmail1">
+                                        <small id="emailHelp" class="form-text text-muted">Номер кадастру, і'мя власника, тип грунту, тощо.</small>
+                                    </label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="3221655100:01:047:0052">
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="form-group pb-3">
+                                    <label for="exampleFormControlSelect1">Тип грунту</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Дерново-слабопідзолисті піщані і глинисто-піщані на давньоалювіальних і воднольодовикових відкладах і морені</option>
+                                        <option>Дерново-середньопідзолисті супіщані на давньоалювіальних і воднольодовикових відкладах і морені</option>
+                                        <option>Дерново-середньо і сильнопідзолисті поверхнево-оглеєні</option>
+                                        <option>Світлі і темно-сірі опідзолені і чорноземи опідзолені, переважно на лесових породах</option>
+                                        <option>Темно-сірі реградовані і чорноземи реградовані переважно на лесових породах</option>
+                                        <option>Чорноземи потужні слабкогумусовані, малогумусні середньогумусні і остаточно-солонцюваті на лесових породах</option>
+                                        <option>Чорноземи звичайні малогумусні і середньогумусні на лесових породах</option>
+                                        <option>Чорноземи південні, слабкогумусовані, малогумусні і остаточно-солонцюваті на лесових породах</option>
+                                        <option>Лучно-чорноземні і їх поверхнево-солонцюваті види переважно на лесових породах</option>
+                                        <option>Лучно-чорноземні глибоко-солонцюваті переважно на лесових породах</option>
+                                        <option>Темно-каштанові і каштанові солонцюваті на лесових породах</option>
+                                        <option>Темно-каштанові і каштанові солонцюваті в комплексі з солонцями</option>
+                                        <option>Лучні на делювіальних і алювіальних відкладах</option>
+                                        <option>Лучно-болотні і болотні на алювіальних, делювіальних і воднольодовикових, торфяно-болотні і низинні торфовища</option>
+                                        <option>Солонці</option>
+                                        <option>Лучно-чорноземні і дернові осолоділі глейові і солоді</option>
+                                        <option>Дернові переважно оглеєні піщані, глинисто-піщані і супіщані в комплексі зі слабкогумусованими пісками</option>
+                                        <option>Дернові опідзолені суглинкові і їх оглеєні види</option>
+                                        <option>Дернові піщані та глинисто-піщані переважно неоглеєні в комплексі зі слабкогумусованими пісками і чорноземними піщаними грунтами</option>
+                                        <option>Бурі горно-лісові , буроземно-підзолисті , дерново-буроземні і коричневі гірські на елювії-делювії щільних порід</option>
+                                        <option>Групи середньо і сильнозмитих грунтів</option>
+                                        <option>Грунтові горизонти не досліджені по фільтраційним властивостям</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="form-group ">
+                                    <label for="exampleFormControlInput1">Точна Широта</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="55.312321">
+                                </div>
+                                <div class="form-group pb-3">
+                                    <label for="exampleFormControlInput2">Точна Довгота</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="38.125343">
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="form-group pb-3">
+                                    <label for="exampleFormControlSelect12">Екологічна ситуація</label>
+                                    <select class="form-control" id="exampleFormControlSelect12">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="form-group pb-3">
+                                    <label for="exampleFormControlSelect12">Віддаленість від населених пунктів</label>
+                                    <select class="form-control" id="exampleFormControlSelect12">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <button type="button" class="btn btn-success mt-3" style="width: 100%;">Пошук</button>
+                    </div>
+                </nav>
+
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+                        <h1 class="h2">Карта грунтів України</h1>
+                        <div class="btn-toolbar mb-2 mb-md-0">
+                            <div class="btn-group mr-2">
+                                <button class="btn btn-sm btn-outline-secondary">Єкспортувати</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src="\Prototype\project\img\Снимок.PNG" data-toggle="modal" data-target="#exampleModal"/>
+                </main>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Інтегральна оцінка земельної ділянки</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Власник: Іван Іванович Іваненко</li>
+                            <li class="list-group-item">Кадастровий номер: 3221655100:01:047:0052</li>
+                            <li class="list-group-item">Координати: (50°27′16″ пн.ш., 30°31′25″ сх.д.)</li>
+                            <li class="list-group-item">Екологічна ситуація: 1</li>
+                            <li class="list-group-item">Віддаленість від населенх пунктів: 1</li>
+                        </ul>
+                        <h3 class="text-center pt-4">86 баллів</h3>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+                        <button type="button" class="btn btn-secondary" >Більше</button>
+                        <button type="button" class="btn btn-primary">Додати до порівняння</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var ctx = document.getElementById("myChart");
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                    datasets: [{
+                        data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+                        lineTension: 0,
+                        backgroundColor: 'transparent',
+                        borderColor: '#007bff',
+                        borderWidth: 4,
+                        pointBackgroundColor: '#007bff'
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: false
+                            }
+                        }]
+                    },
+                    legend: {
+                        display: false,
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
